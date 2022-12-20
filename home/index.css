@@ -112,3 +112,170 @@ a {
     color: #591fff;
   }
 }
+/* Accueil*/
+body{
+  margin: 0%;
+  padding: 0%;
+}
+.barre-nav{
+  background-color: rgb(73, 178, 204);
+  background-size: 100%;
+  z-index: 1;
+}
+#loyenge{
+  background: url(../assets/fond.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+#logo{
+  position: absolute;
+  top: 0.5%;
+  left: 2%;
+}
+.loyenge-text{
+  text-align: center;
+  color: #fff;
+  padding-top: 100px;
+}
+.loyenge-text h1{
+  font-size: 80px 
+}
+.loyenge-text p{
+  font-size: 20px;
+  font-style: italic;
+}
+.loyenge-btn{
+margin: 70px auto O;  
+}
+.loyenge-btn a{ 
+  width: 150px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 0;
+  color: #fff;
+  border: .5px solid #fff;
+  position: relative;
+  z-index: 1;
+  transition: color 0.5s;
+}
+.loyenge-btn a span{
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: -1;
+  transition: 0.5s;
+}
+.loyenge-btn a:hover span{
+  width: 100%;
+}
+.loyenge-btn a:hover{
+  color:black ;
+}
+
+/* Etudiant */
+
+#etudiant{
+  width: 100%;
+  padding: 70px 0;
+  background: #e4dbdb;
+}
+.titre-text{
+  text-align: center;
+  padding-bottom: 70px;
+}
+#grand-titre{
+  margin: auto;
+  font-size: 50px;
+  color: rgba(48, 48, 182, 0.829);
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#sous-titre{
+  margin: auto;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+.etudiant-article{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+}
+.self-article{
+  flex-basis: 30%;
+ text-align: center; 
+  border-radius: 7px;
+  margin-bottom: 20px;
+  color: #fff;
+  position: relative;
+}
+.self-article img{
+  width: 100%;
+  border-radius: 7px;
+}
+.over{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  border-radius: 7px;
+  cursor: pointer;
+  background: linear-gradient(rgba(190, 186, 186, 0.5), rgba(21, 21, 168, 0.849));
+  opacity: 0;
+  transition: 1s;
+}
+.self-article:hover .over{
+  opacity: 1;
+}
+.description{
+  width: 85%;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: 1s;
+}
+.description p{
+  font-size: 11px;
+}
+.self-article:hover .description {
+  bottom: 20%;
+  opacity: 1;
+  cursor: pointer;
+}
+/* A propos */
+#propos{
+  width: 100%;
+  padding: 70px 0;
+}
+.propos-row{ 
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.propos-col{
+  flex-basis: 28%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px 3px #00968814;
+  cursor: pointer;
+  transition: transform .5s;
+  }
+  .propos-col p{
+    font-size: 16px;
+  }
+  .propos-col:hover{
+    transform: translateY(7px) ;
+  }
