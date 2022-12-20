@@ -1,0 +1,160 @@
+/* COLOR CUSTOME */
+:root {
+  --darkColor: #242424;
+  --bgColor: #f9f3f3;
+  --textWhite: #ffffff;
+  --secondeColor: #591fff;
+}
+
+/* GENERAL CUSTOME */
+* {
+  font-family: Roboto, sans-serif;
+  font-weight: lighter;
+  transition: 0.1s ease 0.15s;
+  color: var(--darkColor);
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--bg-color);
+}
+.container {
+  margin: 0.3rem;
+  padding: 1.5rem;
+}
+.NavContainer {
+  margin: 0.3rem;
+  padding: 0.3rem;
+}
+
+@media screen and (min-width: 1024px) {
+  /* NAVBAR */
+  .navBar {
+    top: 0;
+    position: sticky;
+    z-index: 999;
+    background-color: var(--textWhite);
+  }
+  .navContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .logo > h1 > a {
+    font-size: large;
+    font-weight: 500;
+    color: var(--darkColor);
+  }
+  .logo > h1 > a > .NavClr {
+    color: var(--secondeColor);
+    font-weight: 300;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.5rem;
+  }
+  .linksMenu {
+    font-size: small;
+    list-style: none;
+    padding-left: 2rem;
+  }
+  .linksMenu:hover {
+    color: #591fff;
+    font-weight: 600;
+  }
+  .burgerMenu {
+    display: none;
+  }
+  #links {
+    display: none;
+  }
+
+  /* MAIN PART */
+  .mainPart {
+    background-color: var(--bgColor);
+  }
+  .mainContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0.3rem;
+    padding: 1.5rem;
+  }
+  .textPartLeft{
+    align-content: center;
+    width: 70vh;
+  }
+ /*  .textPartLeft>h1{
+    padding: 7rem;
+    align-items: center;
+    align-self: center;
+  } */
+  .imgBookRight{
+    justify-content: center;
+  }
+  .imgBookRight>.bookImage{
+    display: flex;
+    height: 60vh;
+  }
+  /* END MAIN PART */
+}
+
+/* RESPONSIVE DEVICE TABLET OR MOBILE */
+@media screen and (max-width: 1024px) {
+  .navBar {
+    top: 0;
+    position: sticky;
+    z-index: 999;
+    background-color: var(--textWhite);
+  }
+  .navContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .logo > h1 > a {
+    font-size: medium;
+    font-weight: 500;
+    color: var(--darkColor);
+  }
+  .logo > h1 > a > .NavClr {
+    color: var(--secondeColor);
+    font-weight: 300;
+  }
+  .burgerIcon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #242424;
+    visibility: visible;
+  }
+  .menu {
+    display: none;
+  }
+  #sideMenu {
+    display: none;
+  }
+  #sideMenu.active {
+    display: block;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+    padding-right: 3rem;
+    top: 10px;
+    right: 0;
+    transition: right 0.7s ease;
+  }
+  .linksMenu {
+    font-size: small;
+    list-style: none;
+    padding-bottom: 2rem;
+  }
+  .linksMenu:hover {
+    color: #591fff;
+  }
+}
