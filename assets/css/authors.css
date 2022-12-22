@@ -4,7 +4,6 @@
   --bgColor: #f9f3f3;
   --textWhite: #ffffff;
   --secondeColor: #591fff;
-  --secondeColorHover: #8054f9;
 }
 
 /* GENERAL CUSTOME */
@@ -17,9 +16,6 @@
 body {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 a {
   text-decoration: none;
@@ -33,18 +29,8 @@ a {
   margin: 0.3rem;
   padding: 0.3rem;
 }
-.NavClr {
-  color: var(--secondeColor);
-  font-weight: 300;
-}
-footer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  background-color: var(--bgColor);
-}
 
-@media screen and (max-width: 1600px) {
+@media screen and (min-width: 1024px) {
   /* NAVBAR */
   .navBar {
     top: 0;
@@ -69,7 +55,7 @@ footer {
   .menu {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0.5rem;
   }
   .linksMenu {
@@ -81,7 +67,9 @@ footer {
     color: #591fff;
     font-weight: 600;
   }
-
+  .burgerMenu {
+    display: none;
+  }
   #links {
     display: none;
   }
@@ -89,8 +77,6 @@ footer {
   /* MAIN PART */
   .mainPart {
     background-color: var(--bgColor);
-    display: flex;
-    justify-content: center;
   }
   .mainContainer {
     display: flex;
@@ -99,115 +85,21 @@ footer {
     margin: 0.3rem;
     padding: 1.5rem;
   }
-  .textPartLeft {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .textPartLeft{
     align-content: center;
-    width: 65vh;
-    padding: 2rem;
-    margin: 2rem;
+    width: 70vh;
   }
-  .textPartLeft > h1 {
-    color: var(--secondeColor);
-    font-weight: 520;
-    font-size: xx-large;
-  }
-  .textPartLeft > p {
-    text-align: left;
-  }
-  .textPartLeft > .containerBtn > .primary {
-    text-align: center;
-    font-size: large;
-    cursor: pointer;
-    padding: 2vh;
-    width: 25vh;
-    color: var(--textWhite);
-    background-color: var(--secondeColor);
-    border: none;
-    border-radius: 5vh;
-  }
-  .textPartLeft > .containerBtn > .primary:hover {
-    text-align: center;
-    font-size: large;
-    cursor: pointer;
-    padding: 2vh;
-    width: 25vh;
-    color: var(--textWhite);
-    background-color: var(--secondeColorHover);
-    border: none;
-    border-radius: 10vh;
-  }
-  /*  .textPartLeft>h1{
+ /*  .textPartLeft>h1{
     padding: 7rem;
     align-items: center;
     align-self: center;
   } */
-  .imgBookRight {
+  .imgBookRight{
     justify-content: center;
   }
-  .imgBookRight > .bookImage {
+  .imgBookRight>.bookImage{
     display: flex;
-    height: 50vh;
-  }
-  .section1 {
-    display: flex;
-    justify-content: center;
-  }
-  .section1 > .containerAuthors {
-    display: flex;
-    justify-content: space-between;
-    margin: 0.3rem;
-    padding: 1.5rem;
-  }
-  .section1 > .containerAuthors > .imgAuthors {
-    display: flex;
-    justify-content: center;
-    margin: 0.3rem;
-    padding: 1.5rem;
-  }
-  .section1 > .containerAuthors > .imgAuthors > .authorsImg {
-    display: flex;
-    align-self: center;
     height: 60vh;
-  }
-  .section1 .authorsList {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    align-content: center;
-    height: 80vh;
-    width: 70vh;
-  }
-  .section1 .authorsList > .authorsBox {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    cursor: pointer;
-    width: 60vh;
-    height: 20vh;
-    border-radius: 3vh;
-    align-items: center;
-    align-self: center;
-    align-content: center;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
-  }
-  .section1 .authorsList > .authorsBox:hover {
-    background-color: var(--bgColor);
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
-  }
-  .section1 .authorsList > .authorsBox > .top > {
-    display: flex;
-    justify-content: center;
-  }
-  .section1 .authorsList > .authorsBox > .top > img {
-    height: 10vh;
-  }
-  .endPart {
-    display: flex;
-    justify-content: center;
   }
   /* END MAIN PART */
 }
@@ -217,22 +109,13 @@ footer {
   .navBar {
     top: 0;
     position: sticky;
-    display: flex;
-    justify-content: center;
     z-index: 999;
     background-color: var(--textWhite);
   }
-  .navBar > .NavContainer {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    width: 100%;
-  }
-  .navBar > .NavContainer > .navContent {
+  .navContent {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 100%;
   }
   .logo > h1 > a {
     font-size: medium;
@@ -243,34 +126,27 @@ footer {
     color: var(--secondeColor);
     font-weight: 300;
   }
+  .burgerIcon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #242424;
+    visibility: visible;
+  }
   .menu {
     display: none;
-  }
-  .burgerMenu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--darkColor);
-    margin-top: 0.4rem;
-    padding: 1.5rem;
-  }
-  .burgerMenu > #openBtn > .burgerIcon > i:hover {
-    color: var(--secondeColorHover);
-  }
-  #links {
-    display: flex;
   }
   #sideMenu {
     display: none;
   }
-  .sideMenu.active {
-    display: flex;
+  #sideMenu.active {
+    display: block;
     flex-direction: column;
     justify-content: space-around;
     position: fixed;
     padding-right: 3rem;
-    top: 70px;
-    right: -100%;
+    top: 10px;
+    right: 0;
     transition: right 0.7s ease;
   }
   .linksMenu {
@@ -281,131 +157,4 @@ footer {
   .linksMenu:hover {
     color: #591fff;
   }
-  /* MAIN PART */
-  .mainPart {
-    background-color: var(--bgColor);
-    display: flex;
-    justify-content: center;
-  }
-  .mainContainer {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    margin: 0.3rem;
-    padding: 1.5rem;
-    text-align: center;
-  }
-  .textPartLeft {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    padding: 2rem;
-    margin: 2rem;
-  }
-  .textPartLeft > h1 {
-    color: var(--secondeColor);
-    font-weight: 520;
-    font-size: xx-large;
-  }
-  .textPartLeft > p {
-    text-align: center;
-  }
-  .textPartLeft > .containerBtn > .primary {
-    text-align: center;
-    font-size: large;
-    cursor: pointer;
-    padding: 2vh;
-    width: 25vh;
-    color: var(--textWhite);
-    background-color: var(--secondeColor);
-    border: none;
-    border-radius: 5vh;
-  }
-  .textPartLeft > .containerBtn > .primary:hover {
-    text-align: center;
-    font-size: large;
-    cursor: pointer;
-    padding: 2vh;
-    width: 25vh;
-    color: var(--textWhite);
-    background-color: var(--secondeColorHover);
-    border: none;
-    border-radius: 10vh;
-  }
-  /*  .textPartLeft>h1{
-    padding: 7rem;
-    align-items: center;
-    align-self: center;
-  } */
-  .imgBookRight {
-    display: flex;
-    justify-content: center;
-  }
-  .imgBookRight > .bookImage {
-    display: flex;
-    height: 60vh;
-  }
-  .section1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .section1 > .containerAuthors {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0.3rem;
-    padding: 1.5rem;
-  }
-  .section1 > .containerAuthors > .imgAuthors {
-    display: flex;
-    justify-content: center;
-    margin: 0.3rem;
-    padding: 1.5rem;
-  }
-  .section1 > .containerAuthors > .imgAuthors > .authorsImg {
-    display: flex;
-    align-self: center;
-    height: 60vh;
-  }
-  .section1 .authorsList {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    align-content: center;
-    height: 80vh;
-    width: 70vh;
-  }
-  .section1 .authorsList > .authorsBox {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    cursor: pointer;
-    width: 60vh;
-    height: 20vh;
-    border-radius: 3vh;
-    align-items: center;
-    align-self: center;
-    align-content: center;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
-  }
-  .section1 .authorsList > .authorsBox:hover {
-    background-color: var(--bgColor);
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
-  }
-  .section1 .authorsList > .authorsBox > .top > {
-    display: flex;
-    justify-content: center;
-  }
-  .section1 .authorsList > .authorsBox > .top > img {
-    height: 10vh;
-  }
-  .endPart {
-    display: flex;
-    justify-content: center;
-  }
-  /* END MAIN PART */
 }
