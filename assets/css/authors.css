@@ -81,9 +81,7 @@ footer {
     color: #591fff;
     font-weight: 600;
   }
-  .burgerMenu {
-    display: none;
-  }
+
   #links {
     display: none;
   }
@@ -219,13 +217,22 @@ footer {
   .navBar {
     top: 0;
     position: sticky;
+    display: flex;
+    justify-content: center;
     z-index: 999;
     background-color: var(--textWhite);
   }
-  .navContent {
+  .navBar > .NavContainer {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+  }
+  .navBar > .NavContainer > .navContent {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 100%;
   }
   .logo > h1 > a {
     font-size: medium;
@@ -236,15 +243,28 @@ footer {
     color: var(--secondeColor);
     font-weight: 300;
   }
- 
   .menu {
     display: none;
+  }
+  .burgerMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--darkColor);
+    margin-top: 0.4rem;
+    padding: 1.5rem;
+  }
+  .burgerMenu > #openBtn > .burgerIcon > i:hover {
+    color: var(--secondeColorHover);
+  }
+  #links {
+    display: flex;
   }
   #sideMenu {
     display: none;
   }
-  #sideMenu.active {
-    /* display: flex; */
+  .sideMenu.active {
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     position: fixed;
