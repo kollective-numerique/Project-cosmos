@@ -28,6 +28,7 @@
               >
             </h1>
           </div>
+          <!-- LINKS -->
           <div class="links">
             <ul class="menu">
               <li class="linksMenu"><a href="index.html">Acceuil</a></li>
@@ -39,10 +40,11 @@
               </li>
             </ul>
           </div>
+          <!-- / LINKS -->
 
           <!-- RESPONSIVE MENU -->
           <div id="links">
-            <ul id="sideMenu">
+            <ul id="sideMenu" class="sideMenu">
               <li class="linksMenu"><a href="index.html">Acceuil</a></li>
               <li class="linksMenu">
                 <a href="article.html">Artcile</a>
@@ -52,18 +54,19 @@
               </li>
             </ul>
           </div>
+          <!-- / RESPONSIVE MENU -->
+          
+          <!-- RESPONSIVE BUTTON -->
+          <div class="burgerMenu">
+            <a href="authors.html" id="openBtn">
+              <span class="burgerIcon">
+                <i class="fa-solid fa-bars-staggered"></i>
+              </span>
+            </a>
+          </div>
+          <!-- / RESPONSIVE BUTTON -->
         </div>
-        <!-- / RESPONSIVE MENU -->
 
-        <!-- RESPONSIVE BUTTON -->
-        <div class="burgerMenu">
-          <a href="authors.html" id="openBtn">
-            <span class="burgerIcon">
-              <i class="fa-solid fa-bars-staggered"></i>
-            </span>
-          </a>
-        </div>
-        <!-- / RESPONSIVE BUTTON -->
       </div>
     </nav>
     <!-- / HEADER -->
@@ -78,13 +81,87 @@
             publié chaque semaine par
             <span class="NavClr">LOYENGE University .</span>
           </p>
+
+          <div class="containerBtn">
+            <button class="primary"><a href="#section1">Découvrir</a></button>
+          </div>
         </div>
 
         <div class="imgBookRight">
-          <img  class="bookImage" src="assets/book.png" alt="bookImage" />
+          <img class="bookImage" src="assets/ecriture.png" alt="bookImage" />
         </div>
       </div>
     </main>
     <!-- / MAIN PART -->
+
+    <!-- AUHTORS LIST -->
+    <section class="section1" id="section1">
+      <div class="containerAuthors">
+        <!-- PLUME IMAGE -->
+        <div class="imgAuthors">
+          <img src="assets/pen.png" alt="penImage" class="authorsImg" />
+        </div>
+        <!-- / PLUME IMAGE -->
+
+        <!-- AUTHOR PROFIL -->
+        <div class="authorsList">
+          <div class="authorsBox">
+            <div class="top">
+              <img src="assets/user.png" alt="" />
+            </div>
+            <div class="text">
+              <h3 id="user">Dash</h3>
+            </div>
+          </div>
+          <div class="authorsBox">
+            <div class="top">
+              <img src="assets/user.png" alt="" />
+            </div>
+            <div class="text">
+              <h3 id="user">Dash</h3>
+            </div>
+          </div>
+          <div class="authorsBox">
+            <div class="top">
+              <img src="assets/user.png" alt="" />
+            </div>
+            <div class="text">
+              <h3 id="user">Dash</h3>
+            </div>
+          </div>
+          <div class="authorsBox">
+            <div class="top">
+              <img src="assets/user.png" alt="" />
+            </div>
+            <div class="text">
+              <h3 id="user">Dash</h3>
+            </div>
+          </div>
+        </div>
+        <!-- / AUTHOR PROFIL -->
+      </div>
+    </section>
+    <!-- / AUHTORS LISTE -->
+
+    <!-- A BIENTOT -->
+    <div class="endPart">
+      <div class="container">
+        <h1>A bientot <span class="NavClr">...</span></h1>
+      </div>
+    </div>
+    <!-- / A BIENTOT -->
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="logo">
+        <h1>
+          <a href="index.html"
+            >LOYENGE <span class="NavClr">University</span></a
+          >
+        </h1>
+        <p>&copy; copyright Cosmos corporation <br />2022</p>
+      </div>
+    </footer>
+    <!-- / FOOTER -->
   </body>
 </html>
