@@ -1,3 +1,11 @@
+let sidenav = document.getElementById("sideMenu");
+let openBtn = document.getElementById("openBtn");
+
+openBtn.onclick = openNav;
+
+function openNav() {
+  sidenav.classList.toggle("active");
+}
   fetch(`https://jsonplaceholder.typicode.com/posts/10`)
           .then((res) => res.json()) 
           .then((data) => {
