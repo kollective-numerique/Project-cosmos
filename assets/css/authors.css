@@ -52,6 +52,9 @@ footer {
     z-index: 999;
     background-color: var(--textWhite);
   }
+  .burgerMenu {
+    display: none;
+  }
   .navContent {
     display: flex;
     flex-direction: row;
@@ -205,6 +208,15 @@ footer {
   .section1 .authorsList > .authorsBox > .top > img {
     height: 5vh;
   }
+  .section1 .authorsList > .authorsBox > #text {
+    display: flex;
+    justify-content: right;
+  }
+  .section1 .authorsList > .authorsBox > #text > #article {
+    display: flex;
+    justify-content: right;
+    width: 20vh;
+  }
   .endPart {
     display: flex;
     justify-content: center;
@@ -243,44 +255,61 @@ footer {
     color: var(--secondeColor);
     font-weight: 300;
   }
-  .menu {
-    display: none;
-  }
   .burgerMenu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display:block;
+    position:relative;
+    padding:0;
+    width:45px;
+    height:45px;
+    border:none;
+    cursor:pointer;
     color: var(--darkColor);
-    margin-top: 0.4rem;
-    padding: 1.5rem;
+  }
+  .burgerMenu > #openBtn > .burgerIcon > i{
+    color: var(--darkColor);
+    margin-top: 3.2vh;
   }
   .burgerMenu > #openBtn > .burgerIcon > i:hover {
     color: var(--secondeColorHover);
   }
-  #links {
-    display: flex;
+  .menu{
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    width:0;
+    height:calc(100vh - 65px); 
+    background-color: var(--bgColor); 
+    position:absolute;
+    top:65px;
+    right:0;          
+    transform: translateX(110%);
+    transition: all .5s ease-in-out;
   }
-  #sideMenu {
-    display: none;
-  }
-  .sideMenu.active {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    position: fixed;
-    padding-right: 3rem;
-    top: 70px;
-    right: -100%;
-    transition: right 0.7s ease;
-  }
+  .active .menu { 
+    width:100vw;    
+    transform: translateX(0);
+  } 
   .linksMenu {
     font-size: small;
     list-style: none;
     padding-bottom: 2rem;
+    transform: translateX(101%);
+    transition: all .5s ease-in-out;
+  }
+  .active .linksMenu{
+    transform: translateX(0); 
+  }
+  .linksMenu > a {
+    display:block;
+    padding:1rem;
+    font-size:1.6rem;
+    transition: all .4s ease-in-out;
   }
   .linksMenu:hover {
     color: #591fff;
   }
+
+  
   /* MAIN PART */
   .mainPart {
     background-color: var(--bgColor);
