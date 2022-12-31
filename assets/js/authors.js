@@ -1,4 +1,4 @@
-let sidenav = document.getElementById("sideMenu");
+let sidenav = document.querySelector(".menu");
 let openBtn = document.getElementById("openBtn");
 
 openBtn.onclick = openNav;
@@ -9,18 +9,25 @@ function openNav() {
 
 /* RECUPERATION DES DATAS DE L'API */
 
-
-for(var id = 1; id<6; id++){
+for (var id = 1; id < 6; id++) {
   fetch(`https://jsonplaceholder.typicode.com/photos/${id}`)
-  
-  .then((res)=> res.json())
-  .then((result)=>{
-    console.log(result)
-    for(i=1; i< result.length; i++){
-      var div = document.getElementById('text')
-      div;
-    } 
-    let printElement = result.title
-    document.getElementById('article').innerHTML += printElement
-  }) 
-} 
+      .then((res) => res.json())
+      .then((result) => {
+          console.log(result)
+          document.querySelector('.authorsList').innerHTML += display_author(result.thumbnailUrl, result.title);
+      })
+}
+
+let display_author = function(thumbnailUrl, title) {
+  return (
+      `<div class="authorsBox">
+        <div class="top">
+          <img src="assets/user.png" alt="" id="image" />
+        </div>
+        <div id="text">
+          <span id="article">${title}</span>
+        </div>
+   </div>
+  `
+  )
+}
